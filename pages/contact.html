@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Przechodnia</title>
+
+    <script src="https://kit.fontawesome.com/7faeb11aa3.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="../main.css">
+    <script src="../js/formtPhoneField.js" defer></script>
+    <script src="../js/navbar.js" defer></script>
+</head>
+<body>
+    <div class="content">
+        <nav id="navbar">
+            <a href="../index.html">
+                <img src="../imgs/logo.png" alt="Logo" width="150" />
+            </a>
+            <ul class="nav-menu">
+                <li>
+                    <a href="../index.html">Strona Główna</a>
+                </li>
+                <li>
+                    <span>O Nas</span>
+                    <ul>
+                        <li>
+                            <a href="./aboutus.html">Historia</a>
+                        </li>
+                        <li>
+                            <a href="./services.html">Usługi</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="./contact.html" class="active">Kontakt</a>
+                </li>
+            </ul>
+            <a href="tel:+48123123123" class="btn">Zadzwoń</a>
+        </nav>
+
+        <main>
+            <section class="pagehero">
+                <img src="../imgs/tlo.jpg" alt="tlo" />
+                <div class="pagehero__content onimage">
+                    <div class="pagehero__column" >
+                        <img src="../imgs/logo.png" width="200" alt="Przychodnia Weterynaryjna" />
+                        <!-- <br /> -->
+                        <h1 class="pagehero__title main">Kontakt</h1>
+                        <p>
+                            Przychodnia Weterynaryjna Animal<br />
+                            ul. Sadkowska 19, Radom 26-600
+                        </p>
+                    </div>
+                </div>
+            </section>
+            <section class="contact">
+                <h1 class="title">Tutaj Nas Znajdziesz</h1>
+                <iframe class="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2497.590586900585!2d21.073343394741457!3d51.245034585788176!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x471843afb0b27f23%3A0x845a3591b70edc8a!2sSklep%20ABC%20u%20Berna%C5%82a%20Manhattan!5e0!3m2!1spl!2spl!4v1685287908784!5m2!1spl!2spl" width="800" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </section>
+            <section class="pagehero">
+                <div class="pagehero__content" style="padding: 0 12%;align-items: baseline;">
+                    <div class="pagehero__column">
+                        <div class="contact__info">
+                            <h2>DANE WETERYNARI</h2>
+                            <p>NIP: 1231231239</p>
+                            <p>REGON: 394532645</p>
+                        </div>
+                        <div class="contact__info">
+                            <h2>LOKALIZACJA</h2>
+                            <p>Przychodnia Weterynaryjna Animal</p>
+                            <p>ul. Sadkowska 19, Radom 26-600</p>
+                        </div>
+                        <div class="contact__info">
+                            <h2>DANE KONTAKTOWE</h2>
+                            <p>Tel.: +48 123 123 123</p>
+                            <p>Email: email@gmail.com</p>
+                        </div>
+                        <div class="contact__info">
+                            <h2>GODZINY PRACY</h2>
+                            <p>Pon. - Pt.: 10.00 - 20.00</p>
+                        </div>
+                    </div>
+                    <div class="pagehero__column">
+                        <form style="text-align: center;">
+                            <div class="form-set">
+                                <div class="form-control">
+                                    <input type="text" name="first_name" id="first_name" required />
+                                    <label class="form-control__label" for="first_name">Imię</label>
+                                    <span class="validity"></span>
+                                </div>
+                                <div class="form-control">
+                                    <input type="text" name="last_name" id="last_name" required />
+                                    <label class="form-control__label" for="last_name">Nazwisko</label>
+                                    <span class="validity"></span>
+                                </div>
+                            </div>
+                            <div class="form-set">
+                                <div class="form-control">
+                                    <input type="email" name="email" id="email" required />
+                                    <label class="form-control__label" for="email">Email</label>
+                                    <span class="validity"></span>
+                                </div>
+                                <div class="form-control">
+                                    <input type="tel" name="tel" id="tel" pattern="[0-9]{3}-[0-9]{3}-[0-9]{3}"  required />
+                                    <label class="form-control__label" for="tel">Telefon</label>
+                                    <span class="validity"></span>
+                                </div>
+                            </div>
+                            <div class="form-set">
+                                <div class="form-control">
+                                    <select name="doctor" id="doctor" value required>
+                                        <option value disabled hidden selected></option>
+                                        <option value="1">Dokotor 1</option>
+                                        <option value="2">Dokotor 2</option>
+                                    </select>
+                                    <label class="form-control__label" for="doctor">Doktor weterynarz</label>
+                                    <span class="validity"></span>
+                                </div>
+                                <div class="form-control">
+                                    <input type="datetime-local" name="date" id="date" min="2023-05-30T00:00" required />
+                                    <label class="form-control__label" for="date">Data wizyty</label>
+                                    <span class="validity"></span>
+                                </div>
+                            </div>
+                            <div class="form-control">
+                                <textarea name="warmings" id="warmings"></textarea>
+                                <label for="warmings" class="textarea-label">Uwagi</label>
+                            </div>
+                            <div class="form-set">
+                                <div class="form-control">
+                                    <label>
+                                        <input type="checkbox" name="" required />
+                                        <span class="checkmark"></span>
+                                        Zgoda na treści handlowe
+                                    </label>
+                                </div>
+                                <div class="form-control">
+                                    <label>
+                                        <input type="checkbox" name="" />
+                                        <span class="checkmark"></span>
+                                        Zgoda na treści marketingowe
+                                    </label>
+                                </div>
+                            </div>
+
+                            <button class="btn x-lg" type="reset" style="margin-right: 2rem; margin-top: 1rem;">Wyczyść</button>
+                            <button class="btn primary x-lg" type="submit">Prześlij</button>
+                        </form>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+    <footer>
+        <div class="footer__content">
+            <div class="footer__col">
+                <div class="footer__col__title">
+                    <img src="../imgs/logo.png" width="200" />
+                </div>
+                <p>
+                    Przychodnia Weterynaryjna Wetlandia
+                    ul. Starzyńskiego 10 (wejście od ul. Namysłowskiej 12), 03-456 Warszawa
+                </p>
+            </div>
+            <div class="footer__col">
+                <h2 class="footer__col__title">
+                    Godziny Pracy
+                </h2>
+                <i class="fa-solid fa-phone"></i>
+                <a href="tel:+48123123123">+48 123 123 123</a>
+            </div>
+            <div class="footer__col">
+                <h2 class="footer__col__title">
+                    Odnośniki
+                </h2>
+                <ul class="quick_links">
+                    <li>
+                        <a href="index.html">Strona Główna</a>
+                    </li>
+                    <li>
+                        <a href="./aboutus.html">O Nas</a>
+                    </li>
+                    <li>
+                        <a href="./services.html">Usługi</a>
+                    </li>
+                    <li>
+                        <a href="./contact.html">Kontakt</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="footer__col">
+                <h2 class="footer__col__title">
+                    Kontakt
+                </h2>
+                <i class="fa-solid fa-phone"></i>
+                <a href="tel:+48123123123">+48 123 123 123</a>
+            </div>
+        </div>
+        <div class="footer__bottom">
+            <p>Przechodnia Lekarska &copy; 2023 wszelkie prawa zastrzeżone</p>
+            <p>Strone zaprojektował: <b><a href="https://kamilart.pl" target="_blank">Kamil Głuchowski 1P1</a></b></p>
+        </div>
+    </footer>
+</body>
+</html>
